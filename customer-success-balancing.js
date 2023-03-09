@@ -17,7 +17,8 @@ function getCostumerSuccesWithMostClientsId(customerSuccessWithCustomers) {
 
   for (const customerSuccess of customerSuccessWithCustomers) {
     const hasMoreCostumers =
-      customerSuccess.customersQuantity > customerSuccessWithMostCustomers?.customersQuantity;
+      customerSuccess.customersQuantity >
+      customerSuccessWithMostCustomers?.customersQuantity;
 
     if (customerSuccess.customersQuantity === 0) {
       customerSuccesWithoutCustomers++;
@@ -40,6 +41,13 @@ function getCostumerSuccesWithMostClientsId(customerSuccessWithCustomers) {
   }
 }
 
+/**
+ * Get the CustomerSuccess with the most customers
+ *
+ * @param {array} customerSuccess
+ * @param {array} customers
+ * @returns
+ */
 function getCostumerSuccessWithCostumers(customerSuccess, customers) {
   return customerSuccess.map((cs) => {
     let customersQuantity = 0;
